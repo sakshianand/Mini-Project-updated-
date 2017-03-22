@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Amberegul A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>VIT Emart</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-top-in">
 				
 				<ul class="support">
-					<li ><a href="mailto:sakshi.anand2014@vit.ac.in" ><i > </i>sakshi.anand2014@vit.ac.in</a></li>
+					<li ><a href="mailto:sakshi.anand2014@vit.ac.in" ><i > </i>Email</a></li>
 					<li ><span ><i class="tele-in"> </i>0 462 261 61 61</span></li>			
 				</ul>
 				<ul class=" support-right">
@@ -84,10 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	         <p>This is the right paltform for all VITians <span> to sell or buy second hand products-books, clothes, equipments</span></p>
 </div>
 
-	<div class="now">
-	         <a class="morebtn" href="single.html">Explore</a>
-	         <a class="morebtn at-in" href="single.html">Shop Now</a>
-	         <div class="clearfix"> </div>
+	
 	         </div>
  	</div>	
 

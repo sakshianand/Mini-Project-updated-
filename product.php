@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Amberegul A Ecommerce Category Flat Bootstarp Resposive Website Template | Products :: w3layouts</title>
+<title>VIT Emart</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -37,33 +37,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-top com">
 		<div class="container">
 			<div class="header-top-in grid-1">
-				<ul class="support">
-					<li ><a href="mailto:sakshi.anand2014@vit.ac.in" ><i > </i>sakshi.anand2014@vit.ac.in</a></li>
-					<li ><span ><i class="tele-in"> </i>0 462 261 61 61</span></li>			
-				</ul>
-				<ul class=" support-right">
-					<li ><a href="account.html" ><i class="men"> </i>Logout</a></li>
-				</ul>
-				<div class="clearfix"> </div>
+				
+				
 			</div>
 		</div>
 			<div class="header-bottom bottom-com">
 			<div class="container">			
 				<div class="logo">
-					<h1><a href="index.html">Welcome </a></h1>
+					<h1><a href="product.php">Welcome </a></h1>
 				</div>
 				<div class="top-nav">
 				<!-- start header menu -->
-		<ul class="megamenu skyblue menu-in">
-		<li><a  href="index.html">Home</a></li>
-			
-			
-				<li><a  href="#">Products</a></li>
-				
-				<li><a  href="contact.html">Contact</a>
-					
-				</li>
-		 </ul> 
+		
 		 <!---->
 		 <div class="search-in" >
 			<div class="search" >
@@ -97,7 +82,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 						<div class="clearfix"> </div>
 					</div>
-					<!---->
+					<ul class=" support-right">
+					<li ><a href="account.html" ><i class="men"> </i>Logout</a></li>
+				</ul>
+			
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -106,9 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 	</div>
 <!---->
-<div class="container">
-	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Dress &amp; T-shirt </h6>
-</div>
+
 <div class="back">
 	<h2>PRODUCTS</h2>
 </div>
@@ -117,23 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="col-md-3 product-price">
 					  <div class="price-grid">
-					    <div class="of-left">
-						<h3 class="cate cate-on">PRICE</h3>
-					</div>
-	  <ul class="dropdown-menu1">
-            <li><a href="#">
-                <p>
-                      <label for="amount" class="amount">Range:</label>
-                     <input type="text" id="amount" style="border: 0; color: #ff5d56; font-weight: bold;" />
-                         
-						  </p>
-                
-                   <div id="slider-range"></div>
-                </a></li>
-				
-          </ul>
-		  <a  class="go" href="single.html">GO</a>
-		  	<div class="clearfix"> </div>
+					
 <!---->
  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
@@ -205,36 +175,12 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 	<div class="product-middle">
 		
 					<div class="fit-top">
-						<h6 class="shop-top">CHAT WITH THE CUSTOMER</h6>
-						<a href="single.html" class="shop-now">SHOP NOW</a>
+						<h6 class="shop-top"> <a href="chat.php">Chat with Customer Care</a></h6>
+						
 <div class="clearfix"> </div>
 	</div>
 				</div>	 
-						<div class="sellers">
-							<div class="of-left-in">
-								<h3 class="tag">TAGS</h3>
-							</div>
-								<div class="tags">
-									<ul>
-										<li><a href="#">design</a></li>
-										<li><a href="#">fashion</a></li>
-										<li><a href="#">lorem</a></li>
-										<li><a href="#">dress</a></li>
-										<li><a href="#">fashion</a></li>
-										<li><a href="#">dress</a></li>
-										<li><a href="#">design</a></li>
-										<li><a href="#">dress</a></li>
-										<li><a href="#">design</a></li>
-										<li><a href="#">fashion</a></li>
-										<li><a href="#">lorem</a></li>
-										<li><a href="#">dress</a></li>
-										
-										<div class="clearfix"> </div>
-									</ul>
-								
-								</div>
-								
-		</div>
+						
 				<!---->
 				<div class="product-bottom">
 					<div class="of-left-in">
@@ -249,7 +195,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
 amet consectetuer  </a></h6>
 								
-								<span class=" price-in1"> $40.00</span>
+								<span class=" price-in1"> 40.00</span>
 							</div>
 								
 							<div class="clearfix"> </div>
@@ -263,7 +209,7 @@ amet consectetuer  </a></h6>
 								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
 amet consectetuer </a></h6>
 								
-								<span class=" price-in1"> $40.00</span>
+								<span class=" price-in1"> 140.00</span>
 							</div>
 								
 							<div class="clearfix"> </div>
@@ -283,19 +229,14 @@ amet consectetuer </a></h6>
 									<li><a href="#"><i> </i></a></li>
 									<li><a href="#"><i> </i></a></li>
 								</ul>
-								<span class=" price-in1"><small>$70.00</small> $40.00</span>
+								<span class=" price-in1"><small>170.00</small> 240.00</span>
 							</div>
 								
 							<div class="clearfix"> </div>
 							</div>
 				</div>
 <div class=" per1">
-				<a href="single.html" ><img class="img-responsive" src="images/pro.jpg" alt="">
-				<div class="six1">
-					<h4>DISCOUNT</h4>
-					<p>Up to</p>
-					<span>60%</span>
-				</div></a>
+				
 			</div>
 				</div>
 				
