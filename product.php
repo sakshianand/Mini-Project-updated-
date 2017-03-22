@@ -163,20 +163,20 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 						<h3 class="cate">CATEGORIES</h3>
 					</div>
 		 <ul class="menu">
-		<li class="item1"><a href="#">Educational Equipment </a>
+		<li class="item1" id="edu"><a href="#">Educational Equipment </a>
 		</li>
-		<li class="item2"><a href="#">Mobile Tab and Accessories </a>
+		<li class="item2" id="mobile"><a href="#">Mobile Tab and Accessories </a>
 		</li>
-		<li class="item3"><a href="#">Laptops and Accessories</a>
+		<li class="item3" id="laptops"><a href="#">Laptops and Accessories</a>
 		</li>
-		<li class="item4"><a href="#">Sports and Equipments</a>
+		<li class="item4" id="sports"><a href="#">Sports and Equipments</a>
 		</li>
 				
-		<li class="item4"><a href="#">Footwear</a>
+		<li class="item4" id="footwear"><a href="#">Footwear</a>
 		</li>
-		<li class="item4"><a href="#">Books</a>
+		<li class="item4" id="books"><a href="#">Books</a>
 		</li>
-		<li class="item4"><a href="#">Clothing and Accessories</a>
+		<li class="item4" id="clothes"><a href="#">Clothing and Accessories</a>
 		</li>
 	</ul>
 					</div>
@@ -199,6 +199,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 			    });
 			
 			});
+
 		</script>
 <!---->
 	<div class="product-middle">
@@ -315,6 +316,7 @@ amet consectetuer </a></h6>
     	      
                 	<div class="clearfix"></div>		
 		        </div>
+		        <div id="full">
 		        <?php
 		        include_once('Connection.php');
 		        $result ="select * from additem  ";
@@ -373,356 +375,50 @@ amet consectetuer </a></h6>
 	   		     		</div>
 	   		     		
 	   		     	</div>
+	   		     	</div>
 
 		        <?php
 		        }
 		        }
 		        ?>
-		        <!--<div class="product-right-top">
-		        	<div class="top-product">
-		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
-		        			<div class="grid-span-1">
-	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
-	   		     			<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div>
-	   		     		</a>
-	   		     	</div>
-	   		     	
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     		
-	   		     	</div>
-	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
-					<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr1.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
-					<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr2.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="clearfix"> </div>
-		        	</div>
-		        	<div class="top-product">
-					
-		        		<div class="col-md-4 chain-grid simpleCart_shelfItem">
-						<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr7.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div><span>NEW</span></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
-					
-					<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr4.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
-					<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr5.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="clearfix"> </div>
-		        	</div>
-		        	<div class="top-product">
-				
-		        		<div class="col-md-4 chain-grid simpleCart_shelfItem">
-						<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr6.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div><span>NEW</span></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
-					<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr7.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div>
-						<span>NEW</span></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
-					<div class="grid-span-1">
-	   		     		<a href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
-						<div class="link">
-	   		     			<ul >
-										<li><i> </i></li>
-										<li><i class="white1"> </i></li>
-										
-							</ul>
-	   		     		</div>
-						<span>NEW</span></a>
-	   		     		</div>
-	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
-	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
-									<div class="price-at-bottom ">
-										<span class="item_price">$ 75.00</span>
-									</div>
-	   		     				<div class="clearfix"> </div>
-							</div>
-							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
-								<div class="clearfix"> </div>
-							</div>
-	   		     		</div>
-	   		     	</div>
-	   		     	<div class="clearfix"> </div>
-		        	</div>
-		        </div>
-		        <ul class="start">
-					<li><a href="#"><i> </i></a></li>
-					<li><span>1</span></li>
-					<li class="arrow"><a href="#">2</a></li>
-					<li class="arrow"><a href="#">3</a></li>
-					
-					
-					<li><a href="#"><i class="next"> </i></a></li>
-				</ul>
-				<div class="clearfix"> </div>
-				</div>-->
+		      <script type="text/javascript">
+		      	$(document).ready(function(){
+    $("#edu").click(function(){
+      $("#full").load("cuseducation.php");
+    });
+});
+		      	    	$(document).ready(function(){
+    $("#mobile").click(function(){
+      $("#full").load("mobile.php");
+    });
+});
+		      	    	$(document).ready(function(){
+    $("#laptops").click(function(){
+      $("#full").load("laptop.php");
+    });
+});
+ $(document).ready(function(){
+    $("#sports").click(function(){
+      $("#full").load("sports.php");
+    });
+});
+  $(document).ready(function(){
+    $("#footwear").click(function(){
+      $("#full").load("footwear.php");
+    });
+});
+    $(document).ready(function(){
+    $("#books").click(function(){
+      $("#full").load("books.php");
+    });
+});
+        $(document).ready(function(){
+    $("#clothes").click(function(){
+      $("#full").load("clothes.php");
+    });
+     
+});
+		      </script>
 		
 </body>
 </html>
