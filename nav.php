@@ -7,9 +7,9 @@
 					<li ><span ><i class="tele-in"> </i>0 462 261 61 61</span></li>			
 				</ul>
 				<ul class=" support-right">
-				 <li ><a href="account.html" ><i class="men"> </i>Login as customer</a></li>
+				 <li ><a href="loginCustomer.html" ><i class="men"> </i>Login as customer</a></li>
 				 <li ><a href="loginSeller.html" ><i class="men"> </i>Login as seller</a></li>
-				 <li ><a href="loginCustomer.html" ><i class="tele"> </i>Signup as customer</a></li>	
+				 <li ><a href="customerForm.html" ><i class="tele"> </i>Signup as customer</a></li>	
 				 <li ><a href="sellerForm.html" ><i class="tele"> </i>Signup as seller</a></li>			
 				</ul>
 				<div class="clearfix"> </div>
