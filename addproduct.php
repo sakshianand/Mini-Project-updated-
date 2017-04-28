@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once("Connection.php");
+
 if(isset($_POST['btn_upload']))
 {
 	/**function compress($source, $destination, $quality) {
@@ -48,5 +49,6 @@ $d = compress($source_img, $destination_img, 90);**/
 	{
 		die(mysqli_error($conn));
 	}
+	
 }
 ?>

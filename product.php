@@ -1,13 +1,17 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<?php
+session_start();
+include_once("Connection.php");
+$result ="select * from additem where Reg  = '{$_SESSION['reg']}'";
+$res = mysqli_query($conn,$result);
+
+$row_cnt = mysqli_num_rows($res);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>VIT Emart</title>
+
+<title>Amberegul A Ecommerce Category Flat Bootstarp Resposive Website Template | Products :: w3layouts</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -32,23 +36,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body> 
+<?php  ?>
 <!--header-->	
 <div class=" header-product">
 	<div class="header-top com">
 		<div class="container">
-			<div class="header-top-in grid-1">
-				
-				
-			</div>
+			
 		</div>
 			<div class="header-bottom bottom-com">
 			<div class="container">			
 				<div class="logo">
-					<h1><a href="product.php">Welcome </a></h1>
+					<h1><a href="index.html">Welcome <?php  echo $_SESSION['name']; ?></a></h1>
 				</div>
 				<div class="top-nav">
 				<!-- start header menu -->
-		
+		<ul class="megamenu skyblue menu-in">
+		&nbsp; &nbsp;
+		 </ul> 
 		 <!---->
 		 <div class="search-in" >
 			<div class="search" >
@@ -73,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</script>
 
 					<!---->
-					<div class="cart box_1">
+					<!--<div class="cart box_1">
 						<a href="checkout.html">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
@@ -81,11 +85,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 						<div class="clearfix"> </div>
-					</div>
-					<ul class=" support-right">
-					<li ><a href="account.html" ><i class="men"> </i>Logout</a></li>
-				</ul>
-			
+					</div>-->
+					<!---->
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -94,7 +95,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 	</div>
 <!---->
-
+<div class="container">
+	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Products Uploaded </h6>
+</div>
 <div class="back">
 	<h2>PRODUCTS</h2>
 </div>
@@ -103,7 +106,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="col-md-3 product-price">
 					  <div class="price-grid">
-					
+					    <div class="of-left">
+						<h3 class="cate cate-on">PRICE</h3>
+					</div>
+	  <ul class="dropdown-menu1">
+            <li><a href="#">
+                <p>
+                      <label for="amount" class="amount">Range:</label>
+                     <input type="text" id="amount" style="border: 0; color: #ff5d56; font-weight: bold;" />
+                         
+						  </p>
+                
+                   <div id="slider-range"></div>
+                </a></li>
+				
+          </ul>
+		  <a  class="go" href="single.html">GO</a>
+		  	<div class="clearfix"> </div>
 <!---->
  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
@@ -128,28 +147,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 
 <!---->
 		</div>
-				<div class=" rsidebar span_1_of_left">
-					<div class="of-left">
-						<h3 class="cate">CATEGORIES</h3>
-					</div>
-		 <ul class="menu">
-		<li class="item1" id="edu"><a href="#">Educational Equipment </a>
-		</li>
-		<li class="item2" id="mobile"><a href="#">Mobile Tab and Accessories </a>
-		</li>
-		<li class="item3" id="laptops"><a href="#">Laptops and Accessories</a>
-		</li>
-		<li class="item4" id="sports"><a href="#">Sports and Equipments</a>
-		</li>
 				
-		<li class="item4" id="footwear"><a href="#">Footwear</a>
-		</li>
-		<li class="item4" id="books"><a href="#">Books</a>
-		</li>
-		<li class="item4" id="clothes"><a href="#">Clothing and Accessories</a>
-		</li>
-	</ul>
-					</div>
 				<!--initiate accordion-->
 		<script type="text/javascript">
 			$(function() {
@@ -169,119 +167,36 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 			    });
 			
 			});
-
 		</script>
 <!---->
-	<div class="product-middle">
-		
-					<div class="fit-top">
-						<h6 class="shop-top"> <a href="chat.php">Chat with Customer Care</a></h6>
-						
-<div class="clearfix"> </div>
-	</div>
-				</div>	 
+	
+				 
 						
 				<!---->
-				<div class="product-bottom">
-					<div class="of-left-in">
-								<h3 class="best">Recommended Products</h3>
-							</div>
-					<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be.jpg" alt=""></a>
-									
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
-amet consectetuer  </a></h6>
-								
-								<span class=" price-in1"> 40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
-									
-								</div>
-							<div class="fashion-grid1">
-								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
-amet consectetuer </a></h6>
-								
-								<span class=" price-in1"> 140.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
-									
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
-amet consectetuer </a></h6>
-								<ul class="star-footer">
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-								</ul>
-								<span class=" price-in1"><small>170.00</small> 240.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-				</div>
-<div class=" per1">
 				
-			</div>
+
 				</div>
 				
 		
 			<!---->
 			
 				<!---->
-				<div class="col-md-9 product-price1">
-					<div class="mens-toolbar">
-						<p class="showing">Showing 1–9 of 21 results</p>
-	                 <div class="sort">
-			            <select>
-			                   <option value="">Sorting By Price </option>
-			                  <option value=""> Sorting By Location</option>
-			            </select>
-			          
-	    		     </div>
+				
     	      
-                	<div class="clearfix"></div>		
-		        </div>
-		        <div id="full">
-		        <?php
-		        include_once('Connection.php');
-		        $result ="select * from additem  ";
-                $res = mysqli_query($conn,$result);
-                $row_cnt = mysqli_num_rows($res);
-                
-
-    while ($row =  mysqli_fetch_assoc($res))
-    {
-        $rows[] = $row;
-    }
-
-        foreach ($rows as $row) {
-           
-           if($row['available'] != 0)
-           {
-		        ?>
+                			
+		        
 		        <div class="product-right-top">
 		        	<div class="top-product">
+		        	<?php
+		        	for($i=0;$i<$row_cnt;$i++)
+        {
+        	
+		        	?>
 		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
 		        			<div class="grid-span-1">
-		        			<a  href="#">
-		        			<img class="img-responsive " src=<?php print $row['img_path'];  ?> alt=" ">
-		        			<div class="link">
+	   		     		<a  href="single.html"><img class="img-responsive " src="<?php $row = mysqli_fetch_array($res);
+	   		     		$filepath[] = $row['img_path'];  print $filepath[$i]; ?>" alt=" ">
+	   		     			<div class="link">
 	   		     			<ul >
 										<li><i> </i></li>
 										<li><i class="white1"> </i></li>
@@ -290,76 +205,62 @@ amet consectetuer </a></h6>
 	   		     		</div>
 	   		     		</a>
 	   		     	</div>
-	   		     	
 	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html"><?php print $row['ProductName'];  ?></a></h6>
+	   		     			<h6><a href="single.html"><?php $ProductName[] = $row['ProductName']; print $ProductName[$i]; ?></a></h6>
 	   		     			<div class="star-price">
-	   		     				<div class="price-at">
-		   		     				<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									</div>
+	   		     				
 									<div class="price-at-bottom ">
-										<span class="item_price"><?php print $row['Price']; ?></span>
+										<span class="item_price"><?php $price[] = $row['Price']; print $price[$i]; ?> </span>
 									</div>
 	   		     				<div class="clearfix"> </div>
 							</div>
 							<div class="cart-add">
-								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
-								<a class="add2" href="#"><i> </i></a>
+
+								<a class="add1 item_add" href="#">SOLD/UNSOLD</a>
+								
 								<div class="clearfix"> </div>
+
 							</div>
 	   		     		</div>
 	   		     		
 	   		     	</div>
+	   		     	<?php } ?>
+	   		     		</div>
 	   		     	</div>
-
-		        <?php
-		        }
-		        }
-		        ?>
-		      <script type="text/javascript">
-		      	$(document).ready(function(){
-    $("#edu").click(function(){
-      $("#full").load("cuseducation.php");
-    });
-});
-		      	    	$(document).ready(function(){
-    $("#mobile").click(function(){
-      $("#full").load("mobile.php");
-    });
-});
-		      	    	$(document).ready(function(){
-    $("#laptops").click(function(){
-      $("#full").load("laptop.php");
-    });
-});
- $(document).ready(function(){
-    $("#sports").click(function(){
-      $("#full").load("sports.php");
-    });
-});
-  $(document).ready(function(){
-    $("#footwear").click(function(){
-      $("#full").load("footwear.php");
-    });
-});
-    $(document).ready(function(){
-    $("#books").click(function(){
-      $("#full").load("books.php");
-    });
-});
-        $(document).ready(function(){
-    $("#clothes").click(function(){
-      $("#full").load("clothes.php");
-    });
-     
-});
-		      </script>
+	   		     	<div class="clearfix"> </div>
+		        	</div>
+		        </div>
+		        <ul class="start">
+					<li><a href="#"><i> </i></a></li>
+					<li><span>1</span></li>
+					<li class="arrow"><a href="#">2</a></li>
+					<li class="arrow"><a href="#">3</a></li>
+					
+					
+					<li><a href="#"><i class="next"> </i></a></li>
+				</ul>
+				<div class="clearfix"> </div>
+				</div>
+				
+			<div class="clearfix"> </div>
+			
+				
+			
+			<div class="clearfix"> </div>
+			</div>
+					
+				</div>
+				
+			<!---->
 		
+		</div>
+		
+		
+<!---->
+
+<script src="js/simpleCart.min.js"> </script>
+<!---->
+
+<!---->
 </body>
 </html>

@@ -1,13 +1,10 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Amberegul A Ecommerce Category Flat Bootstarp Resposive Website Template | Single :: w3layouts</title>
+<title>Amberegul A Ecommerce Category Flat Bootstarp Resposive Website Template | Products :: w3layouts</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -30,59 +27,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <!--//slider-script-->
 
-<link rel="stylesheet" href="css/etalage.css">
-<script src="js/jquery.etalage.min.js"></script>
-		<script>
-			jQuery(document).ready(function($){
-
-				$('#etalage').etalage({
-					thumb_image_width: 300,
-					thumb_image_height: 400,
-					source_image_width: 900,
-					source_image_height: 1200,
-					show_hint: true,
-					click_callback: function(image_anchor, instance_id){
-						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-					}
-				});
-
-			});
-		</script>
-
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  	ga('create', 'UA-48014931-1', 'codyhouse.co');
-  	ga('send', 'pageview');
-
-  	jQuery(document).ready(function($){
-  		$('.close-carbon-adv').on('click', function(){
-  			$('#carbonads-container').hide();
-  		});
-  	});
-</script>	
-<script src="js/simpleCart.min.js"> </script>
 </head>
 <body> 
 <!--header-->	
 <div class=" header-product">
 	<div class="header-top com">
 		<div class="container">
-			<div class="header-top-in grid-1">
-				<ul class="support">
-					<li ><a href="mailto:info@example.com" ><i > </i>info@example.com</a></li>
-					<li ><span ><i class="tele-in"> </i>0 462 261 61 61</span></li>			
-				</ul>
-				<ul class=" support-right">
-					<li ><a href="account.html" ><i class="men"> </i>Login</a></li>
-					<li ><a href="account.html" ><i class="tele"> </i>Create an Account</a></li>			
-				</ul>
-				<div class="clearfix"> </div>
-			</div>
+			
 		</div>
 			<div class="header-bottom bottom-com">
 			<div class="container">			
@@ -92,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 				<!-- start header menu -->
 		<ul class="megamenu skyblue menu-in">
-	<li><a  href="index.html">Home</a></li>
+		<li><a  href="index.html">Home</a></li>
 			
 			<li class="active grid"><a  href="#">Pages</a>
 				<div class="megapanel">
@@ -255,16 +206,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!---->
 <div class="container">
-	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Lorem Ipsum </h6>
+	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Dress &amp; T-shirt </h6>
 </div>
 <div class="back">
-	<h2>LOREM IPSUM</h2>
+	<h2>PRODUCTS</h2>
 </div>
 		<!---->
 		<div class="product">
 			<div class="container">
 				<div class="col-md-3 product-price">
-					  
+					  <div class="price-grid">
+					    <div class="of-left">
+						<h3 class="cate cate-on">PRICE</h3>
+					</div>
+	  <ul class="dropdown-menu1">
+            <li><a href="#">
+                <p>
+                      <label for="amount" class="amount">Range:</label>
+                     <input type="text" id="amount" style="border: 0; color: #ff5d56; font-weight: bold;" />
+                         
+						  </p>
+                
+                   <div id="slider-range"></div>
+                </a></li>
+				
+          </ul>
+		  <a  class="go" href="single.html">GO</a>
+		  	<div class="clearfix"> </div>
+<!---->
+ <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+ $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 100, 400 ],
+            slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+ });
+$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+});//]]>  
+
+</script>
+
+
+<!---->
+		</div>
 				<div class=" rsidebar span_1_of_left">
 					<div class="of-left">
 						<h3 class="cate">CATEGORIES</h3>
@@ -272,38 +264,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <ul class="menu">
 		<li class="item1"><a href="#">Men </a>
 			<ul class="cute">
-				<li class="subitem1"><a href="#">Cute Kittens </a></li>
-				<li class="subitem2"><a href="#">Strange Stuff </a></li>
-				<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="single.html">Automatic Fails </a></li>
 			</ul>
 		</li>
 		<li class="item2"><a href="#">Women </a>
 			<ul class="cute">
-				<li class="subitem1"><a href="#">Cute Kittens </a></li>
-				<li class="subitem2"><a href="#">Strange Stuff </a></li>
-				<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="single.html">Automatic Fails </a></li>
 			</ul>
 		</li>
 		<li class="item3"><a href="#">Kids</a>
 			<ul class="cute">
-				<li class="subitem1"><a href="#">Cute Kittens </a></li>
-				<li class="subitem2"><a href="#">Strange Stuff </a></li>
-				<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="single.html">Automatic Fails</a></li>
 			</ul>
 		</li>
 		<li class="item4"><a href="#">Accesories</a>
 			<ul class="cute">
-				<li class="subitem1"><a href="#">Cute Kittens </a></li>
-				<li class="subitem2"><a href="#">Strange Stuff </a></li>
-				<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="single.html">Automatic Fails</a></li>
 			</ul>
 		</li>
 				
 		<li class="item4"><a href="#">Shoes</a>
 			<ul class="cute">
-				<li class="subitem1"><a href="#">Cute Kittens </a></li>
-				<li class="subitem2"><a href="#">Strange Stuff </a></li>
-				<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				<li class="subitem1"><a href="product.html">Cute Kittens </a></li>
+				<li class="subitem2"><a href="product.html">Strange Stuff </a></li>
+				<li class="subitem3"><a href="product.html">Automatic Fails </a></li>
 			</ul>
 		</li>
 	</ul>
@@ -333,7 +325,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 					<div class="fit-top">
 						<h6 class="shop-top">LOREM IPSUM</h6>
-						<a href="#" class="shop-now">SHOP NOW</a>
+						<a href="single.html" class="shop-now">SHOP NOW</a>
 <div class="clearfix"> </div>
 	</div>
 				</div>	 
@@ -369,11 +361,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 					<div class="product-go">
 						<div class=" fashion-grid">
-									<a href="#"><img class="img-responsive " src="images/be.jpg" alt=""></a>
+									<a href="single.html"><img class="img-responsive " src="images/be.jpg" alt=""></a>
 									
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="#" >Lorem ipsum dolor sit
+								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
 amet consectetuer  </a></h6>
 								
 								<span class=" price-in1"> $40.00</span>
@@ -383,11 +375,11 @@ amet consectetuer  </a></h6>
 							</div>
 							<div class="product-go">
 						<div class=" fashion-grid">
-									<a href="#"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
+									<a href="single.html"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
 									
 								</div>
 							<div class="fashion-grid1">
-								<h6 class="best2"><a href="#" >Lorem ipsum dolor sit
+								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
 amet consectetuer </a></h6>
 								
 								<span class=" price-in1"> $40.00</span>
@@ -397,11 +389,11 @@ amet consectetuer </a></h6>
 							</div>
 							<div class="product-go">
 						<div class=" fashion-grid">
-									<a href="#"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
+									<a href="single.html"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
 									
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="#" >Lorem ipsum dolor sit
+								<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sit
 amet consectetuer </a></h6>
 								<ul class="star-footer">
 									<li><a href="#"><i> </i></a></li>
@@ -417,163 +409,35 @@ amet consectetuer </a></h6>
 							</div>
 				</div>
 <div class=" per1">
-				<img class="img-responsive" src="images/pro.jpg" alt="">
+				<a href="single.html" ><img class="img-responsive" src="images/pro.jpg" alt="">
 				<div class="six1">
 					<h4>DISCOUNT</h4>
 					<p>Up to</p>
 					<span>60%</span>
-				</div>
+				</div></a>
 			</div>
 				</div>
+				
+		
+			<!---->
+			
 				<!---->
 				<div class="col-md-9 product-price1">
-				<div class="col-md-5 single-top">	
-						<ul id="etalage">
-							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image img-responsive" src="images/si1.jpg" alt="" >
-									<img class="etalage_source_image img-responsive" src="images/si1.jpg" alt="" >
-								</a>
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="images/si2.jpg" alt="" >
-								<img class="etalage_source_image img-responsive" src="images/si2.jpg" alt="" >
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="images/si.jpg" alt=""  >
-								<img class="etalage_source_image img-responsive" src="images/si.jpg" alt="" >
-							</li>
-						    <li>
-								<img class="etalage_thumb_image img-responsive" src="images/si1.jpg"  alt="" >
-								<img class="etalage_source_image img-responsive" src="images/si1.jpg" alt="" >
-							</li>
-						</ul>
-
-					</div>	
-					<div class="col-md-7 single-top-in simpleCart_shelfItem">
-						<div class="single-para ">
-						<h4>Lorem Ipsum</h4>
-							<div class="star-on">
-								<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-								<div class="review">
-									<a href="#"> 1 customer review </a>
-									
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-							
-							<h5 class="item_price">$ 95.00</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
-diam nonummy nibh euismod tincidunt ut laoreet dolore 
-magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-aliquip ex ea commodo consequat.</p>
-							<div class="available">
-								<ul>
-									<li>Color
-										<select>
-										<option>Silver</option>
-										<option>Black</option>
-										<option>Dark Black</option>
-										<option>Red</option>
-									</select></li>
-								<li class="size-in">Size<select>
-									<option>Large</option>
-									<option>Medium</option>
-									<option>small</option>
-									<option>Large</option>
-									<option>small</option>
-								</select></li>
-								<div class="clearfix"> </div>
-							</ul>
-						</div>
-							<ul class="tag-men">
-								<li><span>TAG</span>
-								<span class="women1">: Women,</span></li>
-								<li><span>SKU</span>
-								<span class="women1">: CK09</span></li>
-							</ul>
-								<a href="#" class="add-cart item_add">ADD TO CART</a>
-							
-						</div>
-					</div>
-				<div class="clearfix"> </div>
-			<!---->
-					<div class="cd-tabs">
-			<nav>
-				<ul class="cd-tabs-navigation">
-					<li><a data-content="fashion"  href="#0">Description </a></li>
-					<li><a data-content="cinema" href="#0" >Addtional Informatioan</a></li>
-					<li><a data-content="television" href="#0" class="selected ">Reviews (1)</a></li>
-					
-				</ul> 
-			</nav>
-	<ul class="cd-tabs-content">
-		<li data-content="fashion" >
-		<div class="facts">
-									  <p > There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
-										<ul>
-											<li>Research</li>
-											<li>Design and Development</li>
-											<li>Porting and Optimization</li>
-											<li>System integration</li>
-											<li>Verification, Validation and Testing</li>
-											<li>Maintenance and Support</li>
-										</ul>         
-							        </div>
-
-</li>
-<li data-content="cinema" >
-		<div class="facts1">
-					
-						<div class="color"><p>Color</p>
-							<span >Blue, Black, Red</span>
-							<div class="clearfix"></div>
-						</div>
-						<div class="color">
-							<p>Size</p>
-							<span >S, M, L, XL</span>
-							<div class="clearfix"></div>
-						</div>
-					        
-			 </div>
-
-</li>
-<li data-content="television" class="selected">
-	<div class="comments-top-top">
-				<div class="top-comment-left">
-					<img class="img-responsive" src="images/co.png" alt="">
-				</div>
-				<div class="top-comment-right">
-					<h6><a href="#">Hendri</a> - September 3, 2014</h6>
-					<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									<p>Wow nice!</p>
-				</div>
-				<div class="clearfix"> </div>
-				<a class="add-re" href="#">ADD REVIEW</a>
-			</div>
-
-</li>
-<div class="clearfix"></div>
-	</ul> 
-</div> 
-			<!---->
-		       
+					<div class="mens-toolbar">
+						<p class="showing">Showing 1–9 of 21 results</p>
+	                 <div class="sort">
+			            <select>
+			                  <option value=""> Sorting By Rate</option>
+			                    <option value="">Sorting By Color </option>
+			                    <option value="">Sorting By Price </option>
+			            </select>
+			          
+	    		     </div>
+    	      
+                	<div class="clearfix"></div>		
+		        </div>
+		        <div class="product-right-top">
 		        	<div class="top-product">
-					<h3 class="real">RELETED PRODUCTS</h3>
-		        	
 		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
 		        			<div class="grid-span-1">
 	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
@@ -680,18 +544,292 @@ aliquip ex ea commodo consequat.</p>
 								<div class="clearfix"> </div>
 							</div>
 	   		     		</div>
-	   		     
-		        	</div>
+	   		     	</div>
 	   		     	<div class="clearfix"> </div>
 		        	</div>
-		     
-		      
-				</div>
+		        	<div class="top-product">
+					
+		        		<div class="col-md-4 chain-grid simpleCart_shelfItem">
+						<div class="grid-span-1">
+	   		     		<a href="single.html"><img class="img-responsive " src="images/pr7.jpg" alt=" ">
+						<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+										
+							</ul>
+	   		     		</div><span>NEW</span></a>
+	   		     		</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">$ 75.00</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+	   		     	</div>
+	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
+					
+					<div class="grid-span-1">
+	   		     		<a href="single.html"><img class="img-responsive " src="images/pr4.jpg" alt=" ">
+						<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+										
+							</ul>
+	   		     		</div></a>
+	   		     		</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">$ 75.00</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+	   		     	</div>
+	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
+					<div class="grid-span-1">
+	   		     		<a href="single.html"><img class="img-responsive " src="images/pr5.jpg" alt=" ">
+						<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+										
+							</ul>
+	   		     		</div></a>
+	   		     		</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">$ 75.00</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+	   		     	</div>
+	   		     	<div class="clearfix"> </div>
+		        	</div>
+		        	<div class="top-product">
+				
+		        		<div class="col-md-4 chain-grid simpleCart_shelfItem">
+						<div class="grid-span-1">
+	   		     		<a href="single.html"><img class="img-responsive " src="images/pr6.jpg" alt=" ">
+						<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+										
+							</ul>
+	   		     		</div><span>NEW</span></a>
+	   		     		</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">$ 75.00</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+	   		     	</div>
+	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
+					<div class="grid-span-1">
+	   		     		<a href="single.html"><img class="img-responsive " src="images/pr7.jpg" alt=" ">
+						<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+										
+							</ul>
+	   		     		</div>
+						<span>NEW</span></a>
+	   		     		</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">$ 75.00</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+	   		     	</div>
+	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem">
+					<div class="grid-span-1">
+	   		     		<a href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" ">
+						<div class="link">
+	   		     			<ul >
+										<li><i> </i></li>
+										<li><i class="white1"> </i></li>
+										
+							</ul>
+	   		     		</div>
+						<span>NEW</span></a>
+	   		     		</div>
+	   		     		<div class="grid-chain-bottom ">
+	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6>
+	   		     			<div class="star-price">
+	   		     				<div class="price-at">
+		   		     				<ul class="star-footer">
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+										<li><a href="#"><i> </i></a></li>
+									</ul>
+									</div>
+									<div class="price-at-bottom ">
+										<span class="item_price">$ 75.00</span>
+									</div>
+	   		     				<div class="clearfix"> </div>
+							</div>
+							<div class="cart-add">
+								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+								<a class="add2" href="#"><i> </i></a>
+								<div class="clearfix"> </div>
+							</div>
+	   		     		</div>
+	   		     	</div>
+	   		     	<div class="clearfix"> </div>
+		        	</div>
+		        </div>
+		        <ul class="start">
+					<li><a href="#"><i> </i></a></li>
+					<li><span>1</span></li>
+					<li class="arrow"><a href="#">2</a></li>
+					<li class="arrow"><a href="#">3</a></li>
+					
+					
+					<li><a href="#"><i class="next"> </i></a></li>
+				</ul>
 				<div class="clearfix"> </div>
+				</div>
+				
+			<div class="clearfix"> </div>
+			
+				<div class="shipping">
+					<div class="col-md-3 col-md1">
+						<div class=" phone">
+						
+							<div class="num">
+								<span>8(802)234-5678</span>
+								<p>Monday - Saturday: 8am - 5pm PST</p>
+							</div>
+							<i class="phone-in"> </i>
+							<div class="clearfix"> </div>
+						</div>
+					
+					</div>
+					<div class="col-md-5 col-md2">
+						<div class=" phone1">
+					
+							<i class="phone-in1"> </i>
+							<div class="num1">
+								<span>Free Shipping</span>
+								<p>on all orders over $99</p>
+							</div>
+							<a class="learn-in" href="single.html">Learn More</a>
+							<div class="clearfix"> </div>
+						</div>
+			
+					</div>
+					<div class="col-md-4 col-md3">
+						<div class=" phone2">
+					
+							
+							<div class="num2">
+								<span>Crazy Sale!</span>
+								<p>on selected items</p>
+							</div>
+							<a class="learn-in1" href="single.html">Learn More</a>
+							<div class="clearfix"> </div>
+						</div>
 			</div>
-		</div>
+			<div class="clearfix"> </div>
+			</div>
+					
+				</div>
+				
 			<!---->
-			<div class="bottom-grid1">
+		
+		</div>
+		<div class="bottom-grid1">
 					
 					<div class="fit1">
 						<h3>HAPPY SHOPPING</h3>
@@ -699,8 +837,12 @@ aliquip ex ea commodo consequat.</p>
 sed diam nonummy nibh euismod</p>
 					</div>
 				</div>
+		
 <!---->
-	<div class="footer">
+
+<script src="js/simpleCart.min.js"> </script>
+<!---->
+<div class="footer">
 		<div class="container">
 			<div class="col-md-4 footer-top">
 				<h3>QUICK CONTACT</h3>

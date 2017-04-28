@@ -5,7 +5,7 @@ $Name = $_POST['name'];
 $Reg = $_POST['reg'];
 $Pass = $_POST['pass'];
 $Phone = $_POST['phone'];
-$Email =$_POST['email'];
+//$Email =$_POST['email'];
 $Sex =$_POST['sex'];
 $otp = rand(100000, 999999);
 $_SESSION['otp'] = $otp;
@@ -13,7 +13,7 @@ $_SESSION['name'] = $Name;
 $_SESSION['reg'] = $Reg;
 $_SESSION['pass'] = $Pass;
 $_SESSION['phone'] = $Phone;
-$_SESSION['email'] = $Email;
+//$_SESSION['email'] = $Email;
 $_SESSION['sex'] = $Sex;
 $_SESSION['block'] = $_POST['block'];
 $_SESSION['room'] = $_POST['room'];
@@ -22,7 +22,14 @@ $_SESSION['room'] = $_POST['room'];
 
 $sql = "insert into seller(Reg,otp) values ('$Reg','$otp')";
 $retval = mysqli_query( $conn, $sql );
-
+if($retval)
+{
+    echo "inserted";
+}
+else
+{
+    die(mysqli_error($conn));
+}
 
 //Your authentication key
 /*$authKey = "137617Avrt117V587dfc16";
