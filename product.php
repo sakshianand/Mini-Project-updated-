@@ -56,11 +56,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <!---->
 		 <div class="search-in" >
 			<div class="search" >
-						<form action="search.html">
-							<input type="text" value="Keywords" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keywords';}" class="text">
-							<input type="submit" value="SEARCH">
-						</form>
-							<div class="close-in"><img src="images/close.png" alt="" /></div>
+						
+							<div class="close-in"><div>
 					</div>
 						<div class="right"><button> </button></div>
 				</div>
@@ -104,24 +101,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!---->
 		<div class="product">
 			<div class="container">
-				<div class="col-md-3 product-price">
-					  <div class="price-grid">
-					    <div class="of-left">
-						<h3 class="cate cate-on">PRICE</h3>
+				<div class="">
+					  <div class="">
+					    <div class="">
+						
 					</div>
 	  <ul class="dropdown-menu1">
             <li><a href="#">
-                <p>
-                      <label for="amount" class="amount">Range:</label>
-                     <input type="text" id="amount" style="border: 0; color: #ff5d56; font-weight: bold;" />
-                         
-						  </p>
                 
-                   <div id="slider-range"></div>
+                
+                   <div id=""></div>
                 </a></li>
 				
           </ul>
-		  <a  class="go" href="single.html">GO</a>
+		  
 		  	<div class="clearfix"> </div>
 <!---->
  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -188,14 +181,15 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 		        <div class="product-right-top">
 		        	<div class="top-product">
 		        	<?php
-		        	for($i=0;$i<$row_cnt;$i++)
+		        	while($row=mysqli_fetch_array($res))
         {
         	
 		        	?>
 		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
 		        			<div class="grid-span-1">
-	   		     		<a  href="single.html"><img class="img-responsive " src="<?php $row = mysqli_fetch_array($res);
-	   		     		$filepath[] = $row['img_path'];  print $filepath[$i]; ?>" alt=" ">
+	   		     		<?php 
+	   		     		$id= $row['id']; echo'<a  href="single.php?id='.$id.'">';?><img class="img-responsive " src="<?php 
+	   		     		$filepath = $row['img_path'];  print $filepath; ?>" alt=" ">
 	   		     			<div class="link">
 	   		     			<ul >
 										<li><i> </i></li>
@@ -206,11 +200,11 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 	   		     		</a>
 	   		     	</div>
 	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html"><?php $ProductName[] = $row['ProductName']; print $ProductName[$i]; ?></a></h6>
+	   		     			<h6><a href="single.html"><?php $ProductName = $row['ProductName']; print $ProductName; ?></a></h6>
 	   		     			<div class="star-price">
 	   		     				
 									<div class="price-at-bottom ">
-										<span class="item_price"><?php $price[] = $row['Price']; print $price[$i]; ?> </span>
+										<span class="item_price"><?php $price = $row['Price']; print $price; ?> </span>
 									</div>
 	   		     				<div class="clearfix"> </div>
 							</div>
