@@ -1,9 +1,11 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<?php
+session_start();
+include_once("Connection.php");
+
+$result ="select * from additem where available = 0 ";
+$res = mysqli_query($conn,$result);
+$row_cnt = mysqli_num_rows($res);
+?>
 <!DOCTYPE html>
 <html>
 <head>
