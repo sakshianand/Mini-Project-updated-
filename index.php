@@ -80,8 +80,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<div class="banner">
 		<div class="banner-top">
-	         <h2>THIS IS VIT Emart</h2>
-	         <p>This is the right paltform for all VITians <span> to sell or buy second hand products-books, clothes, equipments</span></p>
+	         <h2><font color="red">THIS IS VIT Emart</h2>
+	         <p><font color="white">This is the right paltform for all VITians <span> to sell or buy second hand products-books, clothes, equipments</span></p>
 </div>
 
 	
