@@ -16,6 +16,7 @@ session_start();
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Update Info</a></li>
+        <li><a href="#">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -34,7 +35,7 @@ session_start();
           </div>
         </div>
         </a>
-        <a href="viewproduct.php">
+        <a href="product.php">
         <div class="col s12 m6">
 
           <div class="card blue-grey darken-1">

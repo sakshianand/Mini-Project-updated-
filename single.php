@@ -1,10 +1,12 @@
 <?php
 session_start();
 include_once("Connection.php");
-$result ="select * from additem where Reg  = '{$_SESSION['reg']}'";
+$id =$_GET["id"];
+$result ="select * from additem where Reg  = '{$_SESSION['reg']}' and id = '{$id}'";
 $res = mysqli_query($conn,$result);
 
 $row_cnt = mysqli_num_rows($res);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -99,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 	</div>
 <div class="back">
-	<h2><?php $row = mysqli_fetch_array($res); $ProductName[] = $row['ProductName']; print $ProductName[0]; ?></h2>
+	<h2><?php while($row = mysqli_fetch_assoc($res)){ $ProductName[] = $row['ProductName']; print $ProductName[0]; ?></h2>
 </div>
 		<!---->
 		<div class="product">
@@ -141,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-5 single-top">	
 						<ul id="etalage">
 						    <li>
-								<img class="etalage_thumb_image img-responsive" src="<?php $row = mysqli_fetch_array($res);
+								<img class="etalage_thumb_image img-responsive" src="<?php 
 	   		     		$filepath[] = $row['img_path'];  print $filepath[0]; ?>"  alt="" >
 								<img class="etalage_source_image img-responsive" src="<?php print $filepath[0]; ?>" alt="" >
 							</li>
@@ -166,12 +168,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="clearfix"> </div>
 							</div>
 							
-							<h5 class="item_price"><?php $price[] = $row['Price']; print $price[0]; ?></h5>
+							<h5 class="item_price">Price:<?php $price[] = $row['Price']; echo $price[0]; ?></h5>
 							<p><?php $Description[] = $row['Description']; print $Description[0]; ?></p>
 							<p>Status:Unsold</p>
 							
 							
-								
+								<?php } ?>
 							
 						</div>
 					</div>
