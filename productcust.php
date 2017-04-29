@@ -47,8 +47,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 				<!-- start header menu -->
 		<ul class="megamenu skyblue menu-in">
-		<li><a  href="index.html">Home</a></li>				
-				<li><a  href="#">Products</a>
+		<li><a  href="productcust.php">Home</a></li>				
+				
 				</li>
 				
 				<li><a  href="contact.html">Contact</a>
@@ -58,8 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <!---->
 		 <div class="search-in" >
 			<div class="search" >
-						<form action="search.html">
-							<input type="text" value="Keywords" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keywords';}" class="text">
+						<form action="search.php">
+							<input type="text" value="Keywords" name="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keywords';}" class="text">
 							<input type="submit" value="SEARCH">
 						</form>
 							<div class="close-in"><img src="images/close.png" alt="" /></div>
@@ -98,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!---->
 <div class="container">
-	<h6 class="dress"><a href="index.html">Home</a> <i> </i> All Products </h6>
+	<h6 class="dress"><a href="index.html">Home</a> &nbsp; &nbsp;&nbsp; &nbsp;<a href="logout.php">Logout</a> </h6>
 </div>
 <div class="back">
 	<h2>PRODUCTS</h2>
@@ -108,22 +108,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="col-md-3 product-price">
 					  <div class="price-grid">
-					    <div class="of-left">
-						<h3 class="cate cate-on">PRICE</h3>
+					    <div class="">
+						
 					</div>
 	  <ul class="dropdown-menu1">
-            <li><a href="#">
-                <p>
-                      <label for="amount" class="amount">Range:</label>
-                     <input type="text" id="amount" style="border: 0; color: #ff5d56; font-weight: bold;" />
-                         
-						  </p>
+            
                 
-                   <div id="slider-range"></div>
+                   <div id=""></div>
                 </a></li>
 				
           </ul>
-		  <a  class="go" href="single.html">GO</a>
+		 
 		  	<div class="clearfix"> </div>
 <!---->
  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
