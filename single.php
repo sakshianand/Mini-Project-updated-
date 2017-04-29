@@ -170,7 +170,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							
 							<h5 class="item_price">Price:<?php $price[] = $row['Price']; echo $price[0]; ?></h5>
 							<p><?php $Description[] = $row['Description']; print $Description[0]; ?></p>
-							<p>Status:Unsold</p>
+							<?php $avail[]=$row['available']; echo'<p>Status: ';if($avail[0]==0){echo "Sold";} else{
+								echo "Unsold";
+							} echo'</p>';?>
 							
 							
 								<?php } ?>
