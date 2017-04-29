@@ -22,7 +22,7 @@
 		<ul class="megamenu skyblue">
 			<li><a  href="index.php">Home</a></li>
 				
-				<li><a  href="main.php">Products</a>
+				<li><a  href="index.php">Products</a>
 				
 				</li>
 				

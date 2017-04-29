@@ -309,16 +309,17 @@ ul.support-right li i.tele{
 .banner-top{
 		background: rgba(255, 93, 86, 0.2);
 		padding: 1em 3em;
+		color:#000;
 		
 }
 .banner h2{
-	color: #000;
+	color: #000080;
 	font-size: 3em;
 	text-transform: uppercase;
 	  font-family: 'Roboto Slab', serif;
 }
 .banner	p{
-	color: #FFF;
+	color: #000;
 	line-height: 1.5em;
 	font-size: 2em;
 	margin:1em 0 0em 0;
