@@ -1,6 +1,6 @@
  <?php
  include_once("Connection.php");
-$result ="select * from additem where category = 'Clothing and Accesories'";
+$result ="select * from additem where category = 'Clothing and Accesories' and available = 1";
 $res = mysqli_query($conn,$result);
 $row_cnt = mysqli_num_rows($res);
         for($i=0;$i<$row_cnt;$i++)
@@ -39,7 +39,7 @@ $row_cnt = mysqli_num_rows($res);
                     <div class="clearfix"> </div>
               </div>
               <div class="cart-add">
-                <a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+                <a class=" add add1 item_add" href="#" id="<?php echo $row["id"]; ?>">ADD TO CART <i> </i></a>
                 <a class="add2" href="#"><i> </i></a>
                 <div class="clearfix"> </div>
               </div>
@@ -52,3 +52,13 @@ $row_cnt = mysqli_num_rows($res);
             
           <?php
           }?>
+          <script type="text/javascript">
+                $(document).ready(function(){
+    $(".add").click(function(){
+     var id = $(this).attr('id');
+    alert(id);
+     $("#full").load("ecart.php",{'id': id});
+
+    });
+  });
+          </script>

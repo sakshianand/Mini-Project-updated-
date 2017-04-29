@@ -259,6 +259,7 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 <!---->
 
 <script src="js/simpleCart.min.js"> </script>
+
 <!---->
 
 <!---->

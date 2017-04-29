@@ -1,16 +1,15 @@
  <?php
  include_once("Connection.php");
-$result ="select * from additem where category = 'Educational Equipments'";
+$result ="select * from additem where Category = 'Educational Equipments' and available = 1";
 $res = mysqli_query($conn,$result);
 $row_cnt = mysqli_num_rows($res);
-        for($i=0;$i<$row_cnt;$i++)
+        
+for($i=0;$i<$row_cnt;$i++)
         { ?>
-      <div class="product-right-top">
-              <div class="top-product">
                 <div class="col-md-4 chain-grid  simpleCart_shelfItem">
                   <div class="grid-span-1">
                   <a  href="#">
-                  <img class="img-responsive " src=<?php  $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?>   alt=" ">
+                  <img class="img-responsive " src="<?php  $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?> "  alt=" ">
                   <div class="link">
                   <ul >
                     <li><i> </i></li>
@@ -39,7 +38,7 @@ $row_cnt = mysqli_num_rows($res);
                     <div class="clearfix"> </div>
               </div>
               <div class="cart-add">
-                <a class="add1 item_add" href="#">ADD TO CART <i> </i></a>
+                <a class="add add1 item_add" href="#"  id="<?php echo $row["id"]; ?>">ADD TO CART <i> </i></a>
                 <a class="add2" href="#"><i> </i></a>
                 <div class="clearfix"> </div>
               </div>
@@ -47,6 +46,16 @@ $row_cnt = mysqli_num_rows($res);
                 
               </div>
               </div>
+               <script type="text/javascript">
+                $(document).ready(function(){
+    $(".add").click(function(){
+     var id = $(this).attr('id');
+    alert(id);
+     $("#full").load("ecart.php",{'id': id});
+
+    });
+  });
+          </script>
 
 
             
