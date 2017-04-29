@@ -192,6 +192,16 @@ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + 
 			});
 		</script>
 <!----> 
+<div class="product-middle">
+		
+					<div class="fit-top">
+						<h6 class="shop-top">Chat with the customer Care</h6>
+						<a href="chat.php" class="shop-now">CHAT NOW</a>
+<div class="clearfix"> </div>
+	</div>
+				</div>	
+
+				<br>
 				<!---->
 				<div class="product-bottom">
 					<div class="of-left-in">
@@ -268,7 +278,7 @@ amet consectetuer </a></h6>
         { ?>
 		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
 		        			<div class="grid-span-1">
-	   		     		<a  href="single.html"><img class="img-responsive " src="<?php $row = mysqli_fetch_array($r);
+	   		     		<a  href="singlecus.php"><img class="img-responsive " src="<?php $row = mysqli_fetch_array($r);
 	   		     		$filepath[] = $row['img_path'];  print $filepath[$i]; ?>" alt=" ">
 	   		     			<div class="link">
 	   		     			<ul >
@@ -276,11 +286,12 @@ amet consectetuer </a></h6>
 										<li><i class="white1"> </i></li>
 										
 							</ul>
+
 	   		     		</div>
 	   		     		</a>
 	   		     	</div>
 	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="single.html"><?php $ProductName[] = $row['ProductName']; print $ProductName[$i]; ?></a></h6>
+	   		     			<h6><a href="singlecus.php"><?php $ProductName[] = $row['ProductName']; print $ProductName[$i]; ?></a></h6>
 	   		     			<div class="star-price">
 	   		     				<div class="price-at">
 		   		     				<ul class="star-footer">
@@ -312,6 +323,7 @@ amet consectetuer </a></h6>
 		        	<div class="clearfix"> </div>
 		        </div>
 				</div>
+
 				<ul class="start">
 					<li><a href="#"><i> </i></a></li>
 					<li><span>1</span></li>
