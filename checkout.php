@@ -1,8 +1,7 @@
 <?php
 session_start();
 include_once("Connection.php");
-
-$result ="select * from additem where available = 0 ";
+$result ="select * from ecart";
 $res = mysqli_query($conn,$result);
 $row_cnt = mysqli_num_rows($res);
 ?>
@@ -39,22 +38,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class=" header-product">
 	<div class="header-top com">
 		<div class="container">
-			<div class="header-top-in grid-1">
-				<ul class="support">
-					<li ><a href="mailto:info@example.com" ><i > </i>info@example.com</a></li>
-					<li ><span ><i class="tele-in"> </i>0 462 261 61 61</span></li>			
-				</ul>
-				<ul class=" support-right">
-					<li ><a href="account.html" ><i class="men"> </i>Login</a></li>
-					<li ><a href="account.html" ><i class="tele"> </i>Create an Account</a></li>			
-				</ul>
-				<div class="clearfix"> </div>
-			</div>
+			
 		</div>
 			<div class="header-bottom bottom-com">
 			<div class="container">			
 				<div class="logo">
-					<h1><a href="index.html">Amberegul</a></h1>
+					<h1><a href="index.html">Welcome <?php echo $_SESSION['name']; ?></a></h1>
 				</div>
 				<div class="top-nav">
 				<!-- start header menu -->
@@ -97,85 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
     				</div>
 				</li>	
-		<li ><a  href="404.html">Blog</a></li>				
-				<li><a  href="#">Products</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class=" col-nav">
-							<div class="h_nav">
-								<h4>BEST SELLING</h4>
-								<div class="sell">
-									<div class="men">
-										<a href="product.html"><img src="images/pi.jpg" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>Lorem Ipsum</h6>
-										<span>$.60.00</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>	
-								<div class="sell">
-									<div class="men">
-										<a href="product.html"><img src="images/pi11.jpg" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6> Dummy Text</h6>
-										<span>$.160.00</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>	
-								<div class="sell">
-									<div class="men">
-										<a href="product.html"><img src="images/pi12.jpg" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>Standard Chunk</h6>
-										<span>$.80.00</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>	
-							</div>							
-						</div>
-						<div class=" col-nav">
-							<div class="h_nav">
-								<h4>TOP RATE</h4>
-								<div class="sell">
-									<div class="men">
-									<a href="product.html"><img src="images/pi13.jpg" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6> Perspiciatis Und</h6>
-										<span>$.90.00</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>	
-								<div class="sell">
-									<div class="men">
-										<a href="product.html"><img src="images/pi.jpg" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>Veritatis Et</h6>
-										<span>$.60.00</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>	
-								<div class="sell">
-									<div class="men">
-										<a href="product.html"><img src="images/pi11.jpg" alt="" ></a>
-									</div>
-									<div class="men-in">
-										<h6>Lorem Ipsum</h6>
-										<span>$.100.00</span>
-									</div>
-									<div class="clearfix"> </div>
-								</div>	
-							</div>							
-						</div>
-					</div>
-    				</div>
-				</li>
-				
-				<li><a  href="contact.html">Contact</a>
+		
 					
 				</li>
 		 </ul> 
@@ -203,15 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</script>
 
 					<!---->
-					<div class="cart box_1">
-						<a href="checkout.html">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-							<img src="images/cart.png" alt=""/></h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						<div class="clearfix"> </div>
-					</div>
+					
 
 					<!---->
 				</div>
@@ -236,65 +139,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<!---->
 				<div class="product-bottom">
-					<div class="of-left-in">
-								<h3 class="best">BEST SELLERS</h3>
-							</div>
-					<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be.jpg" alt=""></a>
-									
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html">Lorem ipsum dolor sit
-amet consectetuer  </a></h6>
-								
-								<span class=" price-in1"> $40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
-									
-								</div>
-							<div class="fashion-grid1">
-								<h6 class="best2"><a href="single.html">Lorem ipsum dolor sit
-amet consectetuer </a></h6>
-								
-								<span class=" price-in1"> $40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
-									
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html">Lorem ipsum dolor sit
-amet consectetuer </a></h6>
-								<ul class="star-footer">
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-								</ul>
-								<span class=" price-in1"><small>$70.00</small> $40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
+					
+					
+							
+							
 				</div>
 <div class=" per1">
-				<a href="single.html"><img class="img-responsive" src="images/pro.jpg" alt="">
-				<div class="six1">
-					<h4>DISCOUNT</h4>
-					<p>Up to</p>
-					<span>60%</span>
-				</div></a>
+				
 			</div>
 				</div>
 				<!---->
@@ -302,7 +153,7 @@ amet consectetuer </a></h6>
 				<div class="check-out">	 
 			
 		 <div class=" cart-items">
-			 <h3>My Shopping Bag (2)</h3>
+			 <h3>My Shopping Bag</h3>
 				<script>$(document).ready(function(c) {
 					$('.close1').on('click', function(c){
 						$('.cart-header').fadeOut('slow', function(c){
@@ -322,158 +173,63 @@ amet consectetuer </a></h6>
 				
 				  <div class="in-check" >
 		  <ul class="unit">
+		  
 			<li><span>Item</span></li>
-			<li><span>Product Name</span></li>		
-			<li><span>Unit Price</span></li>
-			<li><span>Stock Status</span></li>
-			<li> </li>
+			<li><span></span></li>
+			<li><span>Product Name</span></li>
+<li><span></span></li>
+			<li><span>Price</span></li>
+			
+			
 			<div class="clearfix"> </div>
 		  </ul>
+		   	<?php
+		   	while($row=mysqli_fetch_array($res))
+        {
+         ?>
 		  <ul class="cart-header">
 		   <div class="close1"> </div>
-			<li class="ring-in"><a href="single.html" ><img src="images/f1.jpg" class="img-responsive" alt=""></a>
+			<li class="ring-in"><a href="single.html" ><img src="<?php 
+	   		     		$filepath[] = $row['img_path'];  print $filepath[0]; ?>" class="img-responsive" alt=""></a>
 			</li>
-			<li><span>Woo Dress</span></li>
-			<li><span>$ 60.00</span></li>
-			<li><span>In Stock</span></li>
-			<li> <a href="single.html" class="add-cart cart-check">ADD TO CART</a></li>
+			<li><span></span></li>
+			<li><span><?php $ProductName = $row['ProductName']; print $ProductName; ?></span></li>
+			<li><span></span></li>
+			<li><span><?php $price = $row['Price']; print $price; ?></span></li>
+			
 			<div class="clearfix"> </div>
 			</ul>
- <ul class=" cart-header1">
-		   <div class="close2"> </div>
-			<li class="ring-in"><a href="single.html" ><img src="images/f2.jpg" class="img-responsive" alt=""></a>
-			</li>
-			<li><span>Woo Dress</span></li>
-			<li><span>$ 60.00</span></li>
-			<li><span>In Stock</span></li>
-			<li> <a href="single.html" class="add-cart cart-check">ADD TO CART</a></li>
-			<div class="clearfix"> </div>
-			</ul>
+			<?php } ?>
+
+ 
 		</div>
 			 </div>
 					  
 		 </div>
-		 
+<?php
+$result ="select  * from ecart where reg ='{$_SESSION["reg"]}'";
+$r = mysqli_query($conn,$result);
+$total=0;
+while ($row =  mysqli_fetch_array($r))
+{
+	 $total +=  $row['Price'];}
+     echo "Total :";
+     echo $total;
+     $_SESSION['a']=$total;
+
+ ?>
+ <button>Next</button>
+		
 
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
+
 			<!---->
-				<div class="bottom-grid1">
-					
-					<div class="fit1">
-						<h3>HAPPY SHOPPING</h3>
-						<p>Lorem Ipsum sit amet consectuer adipiscing elit
-sed diam nonummy nibh euismod</p>
-					</div>
-				</div>
+				
 <!---->
-	<div class="footer">
-		<div class="container">
-			<div class="col-md-4 footer-top">
-				<h3>QUICK CONTACT</h3>
-				<form>
-						
-						<input type="text" value="ENTER YOUR NAME*" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR NAME*';}">
-						
-						<input type="text" value="ENTER YOUR EMAIL*" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR EMAIL*';}">
-						
-						<input type="text" value="ENTER YOUR PHONE" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='ENTER YOUR PHONE';}">
-					
-						<textarea cols="77" rows="6" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'ENTER YOUR MESSAGE*';}">ENTER YOUR MESSAGE*</textarea>
-						
-							<input type="submit" value="SEND MESSAGE" >
-						
-					</form>
-
-			</div>
-			<div class="col-md-4 footer-middle">
-				<h3>TOP RATED PRODUCTS</h3>
-					<div class="product-go">
-							<div class="grid-product">
-								<h6><a href="#" >Winter Combo Style</a></h6>
-								<ul class="star-footer">
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-								</ul>
-								<span class=" price-in"><small>$70.00</small> $40.00</span>
-							</div>
-								<div class="fashion">
-									<a href="#"><img class="img-responsive " src="images/f1.jpg" alt="">
-									<p>SALE</p></a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-								<div class="product-go">
-							<div class="grid-product">
-								<h6><a href="#" >Winter Combo Style</a></h6>
-								<ul class="star-footer">
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-								</ul>
-								<span class=" price-in"><small>$70.00</small> $40.00</span>
-							</div>
-								<div class="fashion">
-									<a href="#"><img class="img-responsive " src="images/f2.jpg" alt="">
-									<p class="new1">NEW</p></a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-								<div class="product-go">
-							<div class="grid-product">
-								<h6><a href="#" >Winter Combo Style</a></h6>
-								<ul class="star-footer">
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-								</ul>
-								<span class=" price-in"><small>$70.00</small> $40.00</span>
-							</div>
-								<div class="fashion">
-									<a href="#"><img class="img-responsive " src="images/f3.jpg" alt="">
-									<p class="new1">NEW</p></a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-
-			</div>
-			<div class="col-md-4 footer-bottom">
-				<div class="logo-footer">
-					<div class="logo-bottom">
-						<a href="#"><img src="images/lo.png" alt=""></a>
-					</div>
-					<div class="logo-the">
-						<h4>Amberegul Theme</h4>
-						<p>Was designed for opencart, magento, 
-woocommerce and prestashop platforms. 
-It is based on Bootstrap.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="indo">
-				<p class="in">Bandung, Indonesia <span>40553</span></p>
-					<ul class="social-footer ">
-						<li><span><i> </i>+62 226759804 </span></li>
-						<li><span><i class="down"> </i>blithemes</span></li>
-						<li><a href="mailto:info@example.com"><i class="mes"> </i>info@example.com</a></li>
-						<li><a href="#"><i class="mes-in"> </i>http://example.com</a></li>
-					</ul>
-					<a href="#"><img src="images/pa.png" alt=""></a>
-					</div>
-			</div>
-			<div class="clearfix"> </div>
-			<p class="footer-class">© 2015 Amberegul All Rights Reserved | Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-		</div>
-	</div>
+	
 <!---->
 </body>
 </html>
