@@ -173,15 +173,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="single-para ">
 						<h4></h4>
 							<div class="star-on">
-								<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-								<div class="review">
-									<a href="#"> 1 customer review </a>
+								
+								<div class="">
+									
 									
 								</div>
 							<div class="clearfix"> </div>
@@ -191,7 +185,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<p><?php $Description[] = $row['Description']; print $Description[0]; ?></p>
 							
 								<a href="#" class="add-cart item_add">CHECKOUT</a>
-							<?php } ?>
+							
 						</div>
 					</div>
 				<div class="clearfix"> </div>
@@ -200,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<nav>
 				<ul class="cd-tabs-navigation">
 					<li><a data-content="cinema" href="#0" >Seller Information</a></li>
-					<li><a data-content="television" href="#0" class="selected ">Reviews (1)</a></li>
+					
 					
 				</ul> 
 			</nav>
@@ -210,36 +204,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="facts1">
 				
 						<div class="color"><p>Name of the seller</p>
-							<span >Sakshi</span>
+							<span><?php $reg[] = $row['reg']; 
+							$a = "select * from seller where reg = '{$row["reg"]}'";
+							$b= mysqli_query($conn,$a);
+							$tow = mysqli_fetch_assoc($b);
+							$phone = $tow['Phone'];
+							$name = $tow['Name']; echo $name; echo'</span>
 							<div class="clearfix"></div>
 						</div>
 						<div class="color">
 							<p>Contant Number</p>
-							<span >9944649993</span>
+							<span >';echo $phone;'</span>';?>
 							<div class="clearfix"></div>
 						</div>
 					        
 			 </div>
 
 </li>
+<?php } ?>
 <li data-content="television" class="selected">
 	<div class="comments-top-top">
 				<div class="top-comment-left">
-					<img class="img-responsive" src="images/co.png" alt="">
+					
 				</div>
-				<div class="top-comment-right">
-					<h6><a href="#">Hendri</a> - September 3, 2014</h6>
-					<ul class="star-footer">
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-										<li><a href="#"><i> </i></a></li>
-									</ul>
-									<p>Wow nice!</p>
+				<div class="">
+					
+					
 				</div>
-				<div class="clearfix"> </div>
-				<a class="add-re" href="#">ADD REVIEW</a>
+				<div class=""> </div>
+				
 			</div>
 
 </li>

@@ -161,8 +161,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="#"><i> </i></a></li>
 										<li><a href="#"><i> </i></a></li>
 									</ul>
-								<div class="review">
-									<a href="#"> Average customer review </a>
+								<div class="">
+									
 									
 								</div>
 							<div class="clearfix"> </div>
