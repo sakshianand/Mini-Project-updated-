@@ -274,12 +274,14 @@ amet consectetuer </a></h6>
 		        	<div class="top-product">
 		        	<div id="full">
 		        	<?php
-		        	for($i=0;$i<$count;$i++)
-        { ?>
+		   	while($row=mysqli_fetch_array($r))
+        {
+         ?>
 		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem">
 		        			<div class="grid-span-1">
-	   		     		<a  href="singlecus.php"><img class="img-responsive " src="<?php $row = mysqli_fetch_array($r);
-	   		     		$filepath[] = $row['img_path'];  print $filepath[$i]; ?>" alt=" ">
+	   		     		<?php 
+	   		     		$id= $row['id']; echo'<a  href="singlecus.php?id='.$id.'">';?><img class="img-responsive " src="<?php 
+	   		     		$filepath = $row['img_path'];  print $filepath; ?>" alt=" ">
 	   		     			<div class="link">
 	   		     			<ul >
 										<li><i> </i></li>
@@ -291,7 +293,7 @@ amet consectetuer </a></h6>
 	   		     		</a>
 	   		     	</div>
 	   		     		<div class="grid-chain-bottom ">
-	   		     			<h6><a href="singlecus.php"><?php $ProductName[] = $row['ProductName']; print $ProductName[$i]; ?></a></h6>
+	   		     			<h6><a href="singlecus.php"><?php $ProductName = $row['ProductName']; print $ProductName; ?></a></h6>
 	   		     			<div class="star-price">
 	   		     				<div class="price-at">
 		   		     				<ul class="star-footer">
@@ -303,7 +305,7 @@ amet consectetuer </a></h6>
 									</ul>
 									</div>
 									<div class="price-at-bottom ">
-										<span class="item_price"><?php $price[] = $row['Price']; print $price[$i]; ?></span>
+										<span class="item_price"><?php $price = $row['Price']; print $price; ?></span>
 									</div>
 	   		     				<div class="clearfix"> </div>
 							</div>

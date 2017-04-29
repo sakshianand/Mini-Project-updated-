@@ -1,7 +1,8 @@
 <?php
 session_start();
 include_once("Connection.php");
-$result ="select * from additem";
+$id =$_GET["id"];
+$result ="select * from additem where id = '{$id}'";
 $res = mysqli_query($conn,$result);
 
 $row_cnt = mysqli_num_rows($res);
@@ -112,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Lorem Ipsum </h6>
 </div>
 <div class="back">
-	<h2><?php $row = mysqli_fetch_array($res); $ProductName[] = $row['ProductName']; print $ProductName[0]; ?></h2>
+	<h2><?php while($row = mysqli_fetch_assoc($res)){ $ProductName[] = $row['ProductName']; print $ProductName[0];  ?></h2>
 </div>
 		<!---->
 		<div class="product">
@@ -147,122 +148,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="clearfix"> </div>
 	</div>
 				</div>	 
-						<div class="sellers">
-							<div class="of-left-in">
-								<h3 class="tag">TAGS</h3>
-							</div>
-								<div class="tags">
-									<ul>
-										<li><a href="#">design</a></li>
-										<li><a href="#">fashion</a></li>
-										<li><a href="#">lorem</a></li>
-										<li><a href="#">dress</a></li>
-										<li><a href="#">fashion</a></li>
-										<li><a href="#">dress</a></li>
-										<li><a href="#">design</a></li>
-										<li><a href="#">dress</a></li>
-										<li><a href="#">design</a></li>
-										<li><a href="#">fashion</a></li>
-										<li><a href="#">lorem</a></li>
-										<li><a href="#">dress</a></li>
-										
-										<div class="clearfix"> </div>
-									</ul>
-								
-								</div>
-								
-		</div>
+					
 				<!---->
-				<div class="product-bottom">
-					<div class="of-left-in">
-								<h3 class="best">BEST SELLERS</h3>
-							</div>
-					<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="#"><img class="img-responsive " src="images/be.jpg" alt=""></a>
-									
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="#" >Lorem ipsum dolor sit
-amet consectetuer  </a></h6>
-								
-								<span class=" price-in1"> $40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="#"><img class="img-responsive " src="images/be1.jpg" alt=""></a>
-									
-								</div>
-							<div class="fashion-grid1">
-								<h6 class="best2"><a href="#" >Lorem ipsum dolor sit
-amet consectetuer </a></h6>
-								
-								<span class=" price-in1"> $40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-							<div class="product-go">
-						<div class=" fashion-grid">
-									<a href="#"><img class="img-responsive " src="images/be2.jpg" alt=""></a>
-									
-								</div>
-							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="#" >Lorem ipsum dolor sit
-amet consectetuer </a></h6>
-								<ul class="star-footer">
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-									<li><a href="#"><i> </i></a></li>
-								</ul>
-								<span class=" price-in1"><small>$70.00</small> $40.00</span>
-							</div>
-								
-							<div class="clearfix"> </div>
-							</div>
-				</div>
+				
 <div class=" per1">
-				<img class="img-responsive" src="images/pro.jpg" alt="">
-				<div class="six1">
-					<h4>DISCOUNT</h4>
-					<p>Up to</p>
-					<span>60%</span>
-				</div>
+				
+				
 			</div>
 				</div>
 				<!---->
 				<div class="col-md-9 product-price1">
 				<div class="col-md-5 single-top">	
 						<ul id="etalage">
-							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image img-responsive" src="images/si1.jpg" alt="" >
-									<img class="etalage_source_image img-responsive" src="images/si1.jpg" alt="" >
-								</a>
+							 <li>
+								<img class="etalage_thumb_image img-responsive" src="<?php 
+	   		     		$filepath[] = $row['img_path'];  print $filepath[0]; ?>"  alt="" >
+								<img class="etalage_source_image img-responsive" src="<?php print $filepath[0]; ?>" alt="" >
 							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="images/si2.jpg" alt="" >
-								<img class="etalage_source_image img-responsive" src="images/si2.jpg" alt="" >
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="images/si.jpg" alt=""  >
-								<img class="etalage_source_image img-responsive" src="images/si.jpg" alt="" >
-							</li>
-						    <li>
-								<img class="etalage_thumb_image img-responsive" src="images/si1.jpg"  alt="" >
-								<img class="etalage_source_image img-responsive" src="images/si1.jpg" alt="" >
-							</li>
+							
 						</ul>
 
 					</div>	
 					<div class="col-md-7 single-top-in simpleCart_shelfItem">
 						<div class="single-para ">
-						<h4>Lorem Ipsum</h4>
+						<h4></h4>
 							<div class="star-on">
 								<ul class="star-footer">
 										<li><a href="#"><i> </i></a></li>
@@ -278,39 +187,11 @@ amet consectetuer </a></h6>
 							<div class="clearfix"> </div>
 							</div>
 							
-							<h5 class="item_price">$ 95.00</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
-diam nonummy nibh euismod tincidunt ut laoreet dolore 
-magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-aliquip ex ea commodo consequat.</p>
-							<div class="available">
-								<ul>
-									<li>Color
-										<select>
-										<option>Silver</option>
-										<option>Black</option>
-										<option>Dark Black</option>
-										<option>Red</option>
-									</select></li>
-								<li class="size-in">Size<select>
-									<option>Large</option>
-									<option>Medium</option>
-									<option>small</option>
-									<option>Large</option>
-									<option>small</option>
-								</select></li>
-								<div class="clearfix"> </div>
-							</ul>
-						</div>
-							<ul class="tag-men">
-								<li><span>TAG</span>
-								<span class="women1">: Women,</span></li>
-								<li><span>SKU</span>
-								<span class="women1">: CK09</span></li>
-							</ul>
-								<a href="#" class="add-cart item_add">ADD TO CART</a>
+							<h5 class="item_price">Price:<?php $price[] = $row['Price']; echo $price[0]; ?></h5>
+							<p><?php $Description[] = $row['Description']; print $Description[0]; ?></p>
 							
+								<a href="#" class="add-cart item_add">CHECKOUT</a>
+							<?php } ?>
 						</div>
 					</div>
 				<div class="clearfix"> </div>
