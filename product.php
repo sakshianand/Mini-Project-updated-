@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!---->
 <div class="container">
-	<h6 class="dress"><a href="index.html">Home</a> <i> </i> Products Uploaded </h6>
+	<h6 class="dress"><a href="index.html">Home</a>&nbsp;&nbsp; &nbsp;&nbsp; <a href="logout.php">Logout</a></h6>
 </div>
 <div class="back">
 	<h2>PRODUCTS</h2>
