@@ -199,36 +199,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="cd-tabs">
 			<nav>
 				<ul class="cd-tabs-navigation">
-					<li><a data-content="fashion"  href="#0">Description </a></li>
-					<li><a data-content="cinema" href="#0" >Addtional Informatioan</a></li>
+					<li><a data-content="cinema" href="#0" >Seller Information</a></li>
 					<li><a data-content="television" href="#0" class="selected ">Reviews (1)</a></li>
 					
 				</ul> 
 			</nav>
 	<ul class="cd-tabs-content">
-		<li data-content="fashion" >
-		<div class="facts">
-									  <p > There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
-										<ul>
-											<li>Research</li>
-											<li>Design and Development</li>
-											<li>Porting and Optimization</li>
-											<li>System integration</li>
-											<li>Verification, Validation and Testing</li>
-											<li>Maintenance and Support</li>
-										</ul>         
-							        </div>
-
-</li>
+	
 <li data-content="cinema" >
 		<div class="facts1">
+					<?php
+					while($row = mysqli_fetch_assoc($res))
+					{
+						$Reg = $row['reg'];
+						$result1 ="select * from seller where Reg = '{$Reg}'";
+						$res1 = mysqli_query($conn,$result1);
 					
-						<div class="color"><p>Color</p>
-							<span >Blue, Black, Red</span>
+					while($row1 = mysqli_fetch_assoc($res1))
+					{
+
+					
+					
+
+					?>
+						<div class="color"><p>Name of the seller</p>
+							<span >echo $row1['Name'];</span>
 							<div class="clearfix"></div>
 						</div>
+						<?php }} ?>
 						<div class="color">
-							<p>Size</p>
+							<p>Contant Number</p>
 							<span >S, M, L, XL</span>
 							<div class="clearfix"></div>
 						</div>
